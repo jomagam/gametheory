@@ -1,0 +1,24 @@
+use GameTheory;
+use Data::Dumper;
+
+warn "test: SUB-VERSION-11";
+
+my $game = new GameTheory;
+
+$game->payoffs( [[[-1,-1], [-12, 0]], [[0, -12], [-8,-8]]]);
+
+#$game->payoffs( [[[-1,1], [1, -1]], [[1, -1], [-1, 1]]]);
+
+
+$game->strict_dominance;
+print Dumper($game);
+
+
+__END__
+
+
+	HER
+	quiet		speak
+HIS		
+quiet	-1, -1		-12, 0
+speak	0, -12		-8, -8
